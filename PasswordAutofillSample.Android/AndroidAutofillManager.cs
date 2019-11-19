@@ -13,7 +13,7 @@ namespace PasswordAutofillSample.Droid
         {
             if (Build.VERSION.SdkInt >= BuildVersionCodes.O)
             {
-                var manager = (AutofillManager)Application.Context.GetSystemService(Java.Lang.Class.FromType(typeof(AutofillManager)));
+                var manager = (AutofillManager)MainActivity.Current.GetSystemService(Java.Lang.Class.FromType(typeof(AutofillManager)));
                 manager.Commit();
             }
         }
